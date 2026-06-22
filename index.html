@@ -716,6 +716,8 @@ const Indicators = {
     const macd = this.calcMACD(data);
     const rsi = this.calcRSI(data);
     const bb = this.calcBB(data);
+    const volMA5  = this.calcSMA(vols, 5);
+    const volMA10 = this.calcSMA(vols, 10);
     const turnoverRates = data.map(d => d.turnover);
     const turnoverMA5 = this.calcSMA(turnoverRates, 5);
 
